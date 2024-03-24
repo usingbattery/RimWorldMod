@@ -76,7 +76,7 @@
     <projectile>
       <damageDef>Bullet</damageDef>
 	  <!-- 伤害 -->
-      <damageAmountBase>30</damageAmountBase>
+      <damageAmountBase>25</damageAmountBase>
       <stoppingPower>1.5</stoppingPower>
 	  <!-- 穿甲 -->
       <armorPenetrationBase>0</armorPenetrationBase>
@@ -134,7 +134,7 @@
 		<!-- 瞄准时间 -->
         <warmupTime>0</warmupTime>
 		<!-- 射程 -->
-        <range>10.9</range>
+        <range>2.9</range>
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
