@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef Name="SurgertMakeOnMove" ParentName="SurgeryFlesh" Abstract="True">
+    <workAmount>1500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef Name="SurgertLimitMove" ParentName="SurgertMakeOnMove" Abstract="True">
+    <workerClass>Recipe_AddHediff</workerClass>
+  </RecipeDef>
+
+  <RecipeDef Name="SurgertRecoverMove" ParentName="SurgertMakeOnMove" Abstract="True">
+    <workerClass>Recipe_RemoveHediff</workerClass>
+  </RecipeDef>
+
+  <HediffDef>
+    <defName>NoMove</defName>
+    <label>无法移动</label>
+    <labelNoun>无法移动</labelNoun>
+    <description>通过手术切断腿部神经，使对象无法移动</description>
+    <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <setMax>0</setMax>
+            </li>
+          </capMods>
+        </li>
+    </stages>
+    <tags>
+      <li>NoMove</li>
+    </tags>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgertLimitMove">
+    <defName>MakeNoMove</defName>
+    <label>切断腿部神经</label>
+    <description>切断腿部神经。</description>
+    <jobString>切断腿部神经。</jobString>
+    <addsHediff>NoMove</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>HardMove</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgertRecoverMove">
+    <defName>ReverseNoMove</defName>
+    <label>重连腿部神经</label>
+    <description>重连腿部神经。</description>
+    <jobString>重连腿部神经。</jobString>
+    <removesHediff>NoMove</removesHediff>
+  </RecipeDef>
+
+  <HediffDef>
+    <defName>HardMove</defName>
+    <label>难以移动</label>
+    <labelNoun>难以移动</labelNoun>
+    <description>通过手术干扰腿部神经，使对象难以移动</description>
+    <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <setMax>0.16</setMax>
+            </li>
+          </capMods>
+        </li>
+    </stages>
+    <tags>
+      <li>HardMove</li>
+    </tags>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgertLimitMove">
+    <defName>MakeHardMove</defName>
+    <label>干扰腿部神经</label>
+    <description>干扰腿部神经。</description>
+    <jobString>干扰腿部神经。</jobString>
+    <addsHediff>HardMove</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>NoMove</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgertRecoverMove">
+    <defName>ReverseHardMove</defName>
+    <label>恢复腿部神经</label>
+    <description>恢复腿部神经。</description>
+    <jobString>恢复腿部神经。</jobString>
+    <removesHediff>HardMove</removesHediff>
+  </RecipeDef>
+
+</Defs>
