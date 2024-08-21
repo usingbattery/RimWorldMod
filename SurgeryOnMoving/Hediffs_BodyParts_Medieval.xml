@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <RecipeDef Name="SurgertMakeOnMove" ParentName="SurgeryFlesh" Abstract="True">
+  <RecipeDef Name="SurgeryMakeOnMove" ParentName="SurgeryFlesh" Abstract="True">
     <workAmount>1500</workAmount>
     <hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>true</isViolation>
@@ -26,11 +26,11 @@
     </fixedIngredientFilter>
   </RecipeDef>
 
-  <RecipeDef Name="SurgertLimitMove" ParentName="SurgertMakeOnMove" Abstract="True">
+  <RecipeDef Name="SurgeryLimitMove" ParentName="SurgeryMakeOnMove" Abstract="True">
     <workerClass>Recipe_AddHediff</workerClass>
   </RecipeDef>
 
-  <RecipeDef Name="SurgertRecoverMove" ParentName="SurgertMakeOnMove" Abstract="True">
+  <RecipeDef Name="SurgeryRecoverMove" ParentName="SurgeryMakeOnMove" Abstract="True">
     <workerClass>Recipe_RemoveHediff</workerClass>
   </RecipeDef>
 
@@ -54,7 +54,7 @@
     </tags>
   </HediffDef>
 
-  <RecipeDef ParentName="SurgertLimitMove">
+  <RecipeDef ParentName="SurgeryLimitMove">
     <defName>MakeNoMove</defName>
     <label>切断腿部神经</label>
     <description>切断腿部神经。</description>
@@ -65,7 +65,7 @@
     </incompatibleWithHediffTags>
   </RecipeDef>
 
-  <RecipeDef ParentName="SurgertRecoverMove">
+  <RecipeDef ParentName="SurgeryRecoverMove">
     <defName>ReverseNoMove</defName>
     <label>重连腿部神经</label>
     <description>重连腿部神经。</description>
@@ -93,7 +93,7 @@
     </tags>
   </HediffDef>
 
-  <RecipeDef ParentName="SurgertLimitMove">
+  <RecipeDef ParentName="SurgeryLimitMove">
     <defName>MakeHardMove</defName>
     <label>干扰腿部神经</label>
     <description>干扰腿部神经。</description>
@@ -104,7 +104,7 @@
     </incompatibleWithHediffTags>
   </RecipeDef>
 
-  <RecipeDef ParentName="SurgertRecoverMove">
+  <RecipeDef ParentName="SurgeryRecoverMove">
     <defName>ReverseHardMove</defName>
     <label>恢复腿部神经</label>
     <description>恢复腿部神经。</description>
