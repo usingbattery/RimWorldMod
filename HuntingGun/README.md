@@ -6,7 +6,7 @@ they are based on BoltActionRifle(栓动步枪) and PumpShotGun(泵动霰弹枪)
 2. about 1.5 times longer time between two shooting and 1.5 times greater damage at one shoot; time between = cooldownTime + warmupTime;\
    -to injure animals more severer at one shoot and keep balance of dps;
 3. zero warmupTime, all time between two shooting goes to cooldownTime;\
-   -to increase hunting efficiency GREATLY! for it avoids target move out of range at warming up;
+   -to increase hunting efficiency GREATLY! for it avoids target moving out of range at warming up;
 4. 0% armor penetration as a balance;
 5. more range for BoltActionHuntingGun; less range for PumpHuntingGun;\
    -longer range makes more security; less range limits it to hunting animals don't revenge;
